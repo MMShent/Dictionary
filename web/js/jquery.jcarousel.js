@@ -191,12 +191,13 @@
             this.options.initCallback(this, 'init');
         }
 
-        if (!windowLoaded && $.browser.safari) {
-            this.buttons(false, false);
-            $(window).bind('load.jcarousel', function() { self.setup(); });
-        } else {
-            this.setup();
-        }
+//        if (!windowLoaded && $.browser.safari) {
+//            this.buttons(false, false);
+//            $(window).bind('load.jcarousel', function() { self.setup(); });
+//        } else {
+//            this.setup();
+//        }
+          this.setup();
     };
 
     // Create shortcut for internal use

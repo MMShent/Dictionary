@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
             if($key%28 == 0) { echo '</li>'; }
             if($key%28 == 0 || $key == 0) { echo '<li>'; }
 
-            echo '<p>'.link_to($item->getWord(), '@term?term='.$item->getWord()).'</p>';
+            echo '<p>'.link_to($item->getWord(), '@term?term='.$item->getSlug()).'</p>';
           }
         }
       ?>

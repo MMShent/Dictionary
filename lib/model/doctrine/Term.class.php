@@ -5,5 +5,45 @@
  */
 class Term extends BaseTerm
 {
+  public function setUp()
+  {
+    parent::setUp();
+
+    $sluggable0 = new Doctrine_Template_Sluggable(array(
+        'fields' => array(0 => 'word'),
+        'unique' => false,
+        'canUpdate' => true
+    ));
+    $this->actAs($sluggable0);
+
+    $sluggable1 = new Doctrine_Template_Sluggable(array(
+        'fields' => array(0 => 'definition'),
+        'unique' => false,
+        'length' => 10000,
+        'canUpdate' => true,
+        'name' => 'definition_slug'
+    ));
+    $this->actAs($sluggable1);
+  }
+
+
+  public function getRelatedTerms()
+  {
+    $relatedTermSlug = explode('-', $this->getDefinitionSlug());
+    $query = Doctrine::getTable('Term')->createQuery('t');
+
+    if($relatedTermSlug)
+    {
+      foreach($relatedTermSlug as $slug)
+      {
+        if(strlen($slug) > 2)
+        {
+          $query->orWhere('t.slug = ?', $slug);
+        }
+      }
+    }
+
+    return $query->execute();
+  }
 
 }

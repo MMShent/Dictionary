@@ -1,3 +1,14 @@
+up:
+  url:   /doctrine-up
+  param: { module: page, action: up }
+
+down:
+  url:   /doctrine-down
+  param: { module: page, action: down }
+
+search:
+  url:   /search/:term
+  param: { module: page, action: search }
 
 feedback:
   url:   /feedback

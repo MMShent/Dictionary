@@ -92,5 +92,30 @@ http://tacticaldictionary.com/approve
     self::configMail(self::$dan_email, $subject, $plainContent, $body, $recipients);
   }
 
+  public static function sendFeedbackEmail($feedback)
+  {
+    $recipientsArray = array(self::$my_email, self::$dan_email);
+    $recipients = implode(',', $recipientsArray);
+  	$subject = '[Wiki] - New feedback arrived';
+
+    $body = '<strong>New feedback just arrived:</strong><br />'."\r\n";
+    $body .= '<br /><br />'."\r\n";
+    $body .= $feedback['text'].'<br /><br />'."\r\n";
+    $body .= '<strong>Subject:</strong> '.$feedback['subject'].' <br /><br />'."\r\n";
+    $body .= '<strong>From:</strong> '.$feedback['email'].' <br /><br />'."\r\n";
+
+    $text = $feedback['text'];
+    $subjectFake = $feedback['subject'];
+    $email = $feedback['email'];
+    $plainContent = "New feedback just arrived:\r\n\r\n
+$text
+\r\n\r\n
+Subject: $subjectFake \r\n
+Email: $email
+\r\n";
+
+    self::configMail(self::$dan_email, $subject, $plainContent, $body, $recipients);
+  }
+
 }
 ?>

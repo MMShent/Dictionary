@@ -4,7 +4,7 @@
     <?php include_http_metas() ?>
     <?php include_metas() ?>
     <?php if (!include_slot('title')){ ?>
-      <title>Tactiacldictionary.com</title>
+      <title>Tacticaldictionary.com</title>
     <?php } ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <script type="text/javascript">
@@ -17,7 +17,7 @@
 
         <div id="leftBar" class="rounded">
             <?php if (!include_slot('leftBar')){ ?>
-              Left nav bar
+              <?php include_component('page', 'slider') ?>
             <?php } ?>
         </div>
 

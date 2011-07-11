@@ -1,5 +1,7 @@
 <div id="header">
     <h1><a href="<?php echo url_for('@homepage')?>">Tacticaldictionary.com</a></h1>
+    <?php include_partial('global/search')?>
+
     <div id="letters" class="rounded">
         <a href="<?php echo url_for('@char?char=a')?>">A</a>
         <a href="<?php echo url_for('@char?char=b')?>">B</a>

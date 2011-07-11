@@ -1,34 +1,27 @@
 <?php slot('rightBar') ?>
     <div>
-        SOME ADDS GOES HERE ...
+        ADD SPACE
     </div>
 <?php end_slot() ?>
 
+<div class="page">
+  <div>
+    Tacticaldictionary.com was formed to assist both tactical
+    professionals and enthusiasts keep up with the latest acronyms &
+    terminology that define today's tactical landscape.
+    Tacticaldictionary.com accepts user submissions that must be approved
+    before being posted.  Please make sure your submissions are both
+    verifiable, and open-source.  We take opsec seriously and will not
+    host any submissions that are not already publicly available online or
+    in print.  We also accept photographs if they belong to you.  For any
+    questions, please don't hesitate to contact us at
+    info@tacticaldictionary.com.  Thanks for visiting!
+  </div>
 
-<script type="text/javascript">
-jQuery(document).ready(function() {
+  <br />
+  
+  <h5><a href="http://tacticaldictionary.com/terms/opsec">opsec</a></h5>
 
-    jQuery('#mycarousel').jcarousel({
-        vertical: true,
-        scroll: 1
-    });
-});
+</div>
 
-</script>
 
-<?php slot('leftBar') ?>
-  <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
-      <?php 
-        if($terms)
-        {
-          foreach($terms as $key=>$term)
-          {
-            if($key%28 == 0) { echo '</li>'; }
-            if($key%28 == 0 || $key == 0) { echo '<li>'; }
-
-            echo '<p>'.link_to($term->getWord(), '@term?term='.$term->getWord()).'</p>';
-          }
-        }
-      ?>
-  </ul>
-<?php end_slot() ?>

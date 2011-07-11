@@ -17,7 +17,7 @@ class pageActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
   }
 
   public function executeTerm(sfWebRequest $request)
@@ -25,6 +25,7 @@ class pageActions extends sfActions
       $this->word = $term = $request->getParameter('term');
       $this->allTerms = Doctrine::getTable('Term')->getTerms4Slider();
       $this->slide = Doctrine::getTable('Term')->getSlideFromWord($term);
+
 
       $terms = Doctrine::getTable('Term')->getTerm($term);
       if($terms)
@@ -52,12 +53,11 @@ class pageActions extends sfActions
         }
       }
       $this->terms = Doctrine::getTable('Term')->getTerm($request->getParameter('term'));
-
-      
   }
 
   public function executeNew(sfWebRequest $request)
   {
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
     $this->form = new TermForm();
   }
 
@@ -68,6 +68,7 @@ class pageActions extends sfActions
     $this->form = new TermForm();
 
     $this->processForm($request, $this->form);
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
     $this->setTemplate('new');
   }
 
@@ -120,7 +121,7 @@ class pageActions extends sfActions
     {
       $this->terms = Doctrine::getTable('Term')
               ->createQuery('t')
-              ->select('distinct(t.word) as word, t.slug as slug')
+              ->select('distinct(t.word) as word')
               ->where('t.word LIKE ?', $char.'%')
               ->addWhere('t.approved = ?', true)
               ->orderBy('t.word asc')
@@ -129,7 +130,7 @@ class pageActions extends sfActions
     {
       $this->terms = Doctrine::getTable('Term')
               ->createQuery('t')
-              ->select('distinct(t.word) as word, t.slug as slug')
+              ->select('distinct(t.word) as word')
               ->where('SUBSTRING(t.word, 1, 1) = 5')
               ->addWhere('t.approved = ?', true)
               ->orderBy('t.word asc')
@@ -150,6 +151,7 @@ class pageActions extends sfActions
     $term->save();
 
     Tools::sendInformationEmail();
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
     $this->term = $term;
   }
 
@@ -162,6 +164,8 @@ class pageActions extends sfActions
 
     $this->forward404Unless($term = Doctrine::getTable('Term')->find($termId), sprintf('Object term does not exist (%s).', $request->getParameter('id')));
     $this->form = new TermForm($term);
+
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -173,22 +177,21 @@ class pageActions extends sfActions
 
     $this->processVerifiedForm($request, $this->form);
 
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
+
     $this->setTemplate('termEdit');
   }
 
   public function executeStaticPage(sfWebRequest $request)
   {
     $this->page = $request->getParameter('page');
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
   }
 
 
   public function executeFeedback(sfWebRequest $request)
   {
-    if($request->getParameter('feedback'))
-    {
-      Tools::sendFeedbackEmail($request->getParameter('feedback'));
-      $this->emailSent = true;
-    }
+    $this->terms = Doctrine::getTable('Term')->getTerms4Slider();
   }
 
   public function executeSearch(sfWebRequest $request)
@@ -196,20 +199,10 @@ class pageActions extends sfActions
     $term = $request->getParameter('term');
     $this->terms = Doctrine::getTable('Term')
               ->createQuery('t')
-              ->select('distinct(t.word) as word, t.slug as slug')
+              ->select('distinct(t.word) as word')
               ->where('t.word LIKE ?', $term.'%')
               ->addWhere('t.approved = ?', true)
               ->orderBy('t.word asc')
               ->execute();
-  }
-
-  public function executeDown(sfWebRequest $request)
-  {
-     Doctrine::getTable('Term')->down();
-  }
-
-  public function executeUp(sfWebRequest $request)
-  {
-    Doctrine::getTable('Term')->up();
   }
 }

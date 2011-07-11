@@ -1,33 +1,19 @@
 <div class="main">
-  FEEDBACK
-
+  <form id="feedbackForm" method="post" action="<?php echo url_for(@feedback) ?>">
+    <h3>Feedback form</h3>
+    <textarea cols="30" rows="4" name="feedback[text]"></textarea><br />
+    <div class="label">Subject:</div>
+    <input type="text" class="text" name="feedback[subject]" /><br />
+    <div class="label">Email:</div>
+    <input type="text" class="text" name="feedback[email]" /><br />
+    <input type="submit" value="Submit Query" />
+  </form>
+  <br /><br />
+  <?php
+    if(isset($emailSent))
+    {
+      echo '<div id="mailSent">Thank you! Your feedback was submitted. We will review it shortly.</div>';
+    }
+  ?>
 
 </div>
-
-<script type="text/javascript">
-
-jQuery(document).ready(function() {
-
-    jQuery('#mycarousel').jcarousel({
-        vertical: true,
-        scroll: 1
-    });
-});
-</script>
-
-<?php slot('leftBar') ?>
-  <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
-      <?php
-        if($terms)
-        {
-          foreach($terms as $key=>$term)
-          {
-            if($key%28 == 0) { echo '</li>'; }
-            if($key%28 == 0 || $key == 0) { echo '<li>'; }
-
-            echo '<p>'.link_to($term->getWord(), '@term?term='.$term->getWord()).'</p>';
-          }
-        }
-      ?>
-  </ul>
-<?php end_slot() ?>

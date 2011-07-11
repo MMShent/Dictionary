@@ -11,19 +11,29 @@ a:hover {  }
 div.messages { margin: 0 35px 0 45px; padding: 10px 20px; }
 .error { background: #c00; color: #fff; }
 .success { background: #070; color: #fff; }
+a1 { color: #115588; text-decoration: underline; }
+ul { list-style: none; }
 
 html {  font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 14px; height: 100%; }
 body { background: #eee; height: 90%; }
 div#container { margin: 20px auto; width: 800px; }
 
 div#header {}
-div#header h1 { text-shadow: 1px 2px 5px #000000; color: #158; }
-div#header #letters { text-align: center; height: 25px; }
+div#header h1 { text-shadow: 1px 2px 5px #000000; color: #158; float: left; }
+div#header #search { text-align: right; width: 300px; float: right; }
+div#header #letters { text-align: center; height: 25px; clear: both; }
 div#header #letters a { font-weight: bold; line-height: 25px; font-size: 11px; padding: 3px 5px; text-decoration: none; color: #333; }
 div#header #letters a:hover { color: #fff; background: #158; text-shadow: 1px 2px 2px #000000; font-weight: bold; }
 
 div#leftBar { float: left; width: 150px; margin: 15px 0; padding: 5px; }
+ul#mycarousel {  }
+ul#mycarousel li {  }
+ul#mycarousel p { padding: 0px 3px; }
+ul#mycarousel p:hover { background: #ccc; }
+
 div#main { float: left; width: 430px; margin: 15px 20px; padding: 5px; background: #fff; }
+div#main .page { padding: 20px; }
+
 div#rightBar { float: right; width: 150px; margin: 15px 0; padding: 5px; }
 
 div#footer { text-align: center; padding: 0; margin: 20px 0; }
@@ -32,8 +42,12 @@ div#footer #footerLinks a { margin: 0 0 0 20px; }
 
 /* Terms Page */
 div.termItem { margin: 10px 0 30px 0; padding: 0 20px; }
-div.likes { width: 200px; float: left; margin: 13px 0 0 0; }
+div.likes { width: 80px; float: left; margin: 13px 0 0 0; }
 div.share { margin: 15px 0 10px 0; width: 150px; float: left; }
+span.st_sharethis { margin: 15px 0 10px 0; width: 150px; float: left; }
+div.relatedTerms { margin: 10px 0 0 0; }
+div.relatedTerms ul { list-style-type: none; }
+div.relatedTerms ul li { background: #ccc; border: 1px solid #333; float: left; padding: 1px 5px; margin: 0 10px 5px 0; font-size: 12px; }
 
 /* Letter Page */
 div.itemColumn { float: left; margin: 0 0 40px 0; }
@@ -55,3 +69,9 @@ div#bigMain { margin: 15px 0; width: 580px; padding: 20px; }
 /* Login page */
 form#loginForm { padding: 20px; }
 form#loginForm .item{ padding: 5px; }
+
+/* Feedback page */
+#feedbackForm { text-align: center; }
+#feedbackForm textarea { width: 400px; }
+#feedbackForm input.text { width: 400px; margin: 5px 0; }
+#feedbackForm div.label { text-align: left; padding: 0 0 0 15px; }
