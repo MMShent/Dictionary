@@ -1,0 +1,62 @@
+options:
+  collate: utf8_unicode_ci
+  charset: utf8
+  quote_identifier: true
+  type: INNODB
+
+Template:
+  columns:
+    name: { type: string(10), notnull: true, unique: true }
+    description: { type: string(255) }
+
+Page:
+  actAs:
+    Timestampable: ~
+  columns:
+    template_id: { type: integer, notnull: true }
+    name: { type: string(100), notnull: true, unique: true }
+    title: { type: string(255) }
+    url: { type: string(255) }
+    content: { type: string(100000) }
+  relations:
+    Template: { onDelete: RESTRICT, local: template_id, foreign: id }
+
+Term:
+  actAs:
+    Timestampable: ~
+  columns:
+    word: { type: string(100), notnull: true }
+    authorName: { type: string(100), notnull: true }
+    authorEmail: { type: string(255), notnull: true }
+    definition: { type: string(10000), notnull: true }
+    example: { type: string(10000) }
+    likes: { type: integer, notnull: true, default: 0 }
+    verified: { type: integer(1), notnull: true, default: 0 }
+    approved: { type: integer(1), notnull: true, default: 0 }
+
+Tag:
+  columns:
+    value: { type: string(255), notnull: true, unique: true }
+    
+TermHasTags:
+  columns:
+    term_id:  { type: integer, primary: true }
+    tag_id: { type: integer, primary: true }
+  relations:
+    Term:  { onDelete: CASCADE, local: term_id, foreign: id }
+    Tag: { onDelete: CASCADE, local: tag_id, foreign: id }
+
+Slot:
+  columns:
+    name: { type: string(255), notnull: true }
+    position: { type: string(100), notnull: true }
+    title: { type: string(255) }
+    content: { type: string(100000) }
+
+PageHasSlots:
+  columns:
+    page_id: { type: integer, notnull: true }
+    slot_id: { type: integer, notnull: true }
+  relations:
+    Page: { onDelete: CASCADE, local: page_id, foreign: id }
+    Slot: { onDelete: CASCADE, local: slot_id, foreign: id }

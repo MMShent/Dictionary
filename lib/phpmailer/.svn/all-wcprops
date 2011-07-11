@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/public/svn/TaxMaterials/!svn/ver/480/trunk/drupalSM/lib/phpmailer
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/public/svn/TaxMaterials/!svn/ver/480/trunk/drupalSM/lib/phpmailer/class.phpmailer.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/public/svn/TaxMaterials/!svn/ver/423/trunk/drupalSM/lib/phpmailer/class.pop3.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/public/svn/TaxMaterials/!svn/ver/423/trunk/drupalSM/lib/phpmailer/class.smtp.php
+END

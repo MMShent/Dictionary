@@ -1,0 +1,66 @@
+
+feedback:
+  url:   /feedback
+  param: { module: page, action: feedback }
+
+# Static pages
+termsOfService:
+  url:   /terms-of-service
+  param: { module: page, action: staticPage, page: termsOfService  }
+
+privacy:
+  url:   /privacy
+  param: { module: page, action: staticPage, page: privacy  }
+
+aboutUs:
+  url:   /about-us
+  param: { module: page, action: staticPage, page: aboutUs  }
+##########################################
+
+adminEditTerm:
+  url:   /term/:id/edit
+  param: { module: term, action: edit }
+
+login:
+  url:   /login
+  param: { module: security, action: login }
+
+termEdit:
+  url:   /edit/:hash
+  param: { module: page, action: termEdit }
+
+verify:
+  url:   /verify/:hash
+  param: { module: page, action: verify }
+
+declineTerm:
+  url:   /decline/:id/term
+  param: { module: term, action: decline }
+
+approveTerm:
+  url:   /approve/:id/term
+  param: { module: term, action: approve }
+
+approveList:
+  url:   /approve
+  param: { module: term, action: approveList }
+
+char:
+  url:   /char/:char
+  param: { module: page, action: char }
+
+term:
+  url:   /terms/:term
+  param: { module: page, action: term }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: page, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

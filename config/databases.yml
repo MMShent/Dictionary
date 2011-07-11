@@ -1,0 +1,10 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=wiki
+      username: root
+      password: n@ma
+      #dsn:      mysql:host=db369392464.db.1and1.com;dbname=db369392464
+      #username: dbo369392464
+      #password: qweASD123

@@ -1,0 +1,34 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+#Term:
+#  t1:
+#    id: 1
+#    word: 550 CORD
+#    authorName: Shent
+#    authorEmail: shentov@gmail.com
+#    definition: |
+#      Parachute cord, aka Para-Cord.  Refers to the specification for the
+#      tensile strength of the cord, which is 550 lbs.
+#    example: usually pronounced 'five fifty'
+#
+#  t2:
+#    id:
+#    word: ABU
+#    authorName: Shent
+#    authorEmail: shentov@gmail.com
+#    definition: Airman Battle Uniform.
