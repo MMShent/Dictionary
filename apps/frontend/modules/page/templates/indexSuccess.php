@@ -7,7 +7,7 @@
 <div class="page">
   <div>
     Tacticaldictionary.com was formed to assist both tactical
-    professionals and enthusiasts keep up with the latest acronyms &
+    professionals and enthusiasts keep up with the latest acronyms &amp;
     terminology that define today's tactical landscape.
     Tacticaldictionary.com accepts user submissions that must be approved
     before being posted.  Please make sure your submissions are both

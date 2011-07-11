@@ -75,11 +75,27 @@ jQuery(document).ready(function() {
         {
           foreach($allTerms as $key=>$term)
           {
-            if($key%28 == 0) { echo '</li>'; }
-            if($key%28 == 0 || $key == 0) { echo '<li>'; }
-            
+            // If first
+            if($key == 0)
+            {
+              echo '<li>';
+            } else
+            {
+              // If end
+              if($key%28 == 0)
+              {
+                echo '</li><li>';
+              }
+            }
+
             $isSelected = $term->getSlug() == $word ? ' class="selected"' : '';
             echo '<p'.$isSelected.'>'.link_to($term->getWord(), '@term?term='.$term->getSlug()).'</p>';
+
+            // If last
+            if($key == count($allTerms)-1 && $key%28 != 0)
+            {
+              echo '</li>';
+            }
           }
         }
       ?>
