@@ -19513,3 +19513,231 @@ Jul 11 10:44:25 symfony [info] {sfWebDebugLogger} Partial "global/_header" 6.21 
 Jul 11 10:44:25 symfony [info] {sfWebDebugLogger} Partial "global/_search" 0.59 ms (1)
 Jul 11 10:44:25 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 1.18 ms (1)
 Jul 11 10:44:25 symfony [info] {sfWebResponse} Send content (59935 o)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "up" (/doctrine-up)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "down" (/doctrine-down)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "search" (/search/:term)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "feedback" (/feedback)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "termsOfService" (/terms-of-service)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "privacy" (/privacy)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "aboutUs" (/about-us)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "adminEditTerm" (/term/:id/edit)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "login" (/login)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "termEdit" (/edit/:hash)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "verify" (/verify/:hash)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "declineTerm" (/decline/:id/term)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "approveTerm" (/approve/:id/term)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "approveList" (/approve)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "char" (/char/:char)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "term" (/terms/:term)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jul 11 10:45:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'page',  'action' => 'index',)
+Jul 11 10:45:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:45:59 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 11 10:45:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 11 10:45:59 symfony [info] {pageActions} Call "pageActions->executeIndex()"
+Jul 11 10:45:59 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/page/templates/indexSuccess.php"
+Jul 11 10:45:59 symfony [info] {main} Set slot "rightBar"
+Jul 11 10:45:59 symfony [info] {sfPHPView} Decorate content with "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:45:59 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:45:59 symfony [info] {main} Get slot "title"
+Jul 11 10:45:59 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_header.php"
+Jul 11 10:45:59 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_search.php"
+Jul 11 10:45:59 symfony [info] {main} Get slot "leftBar"
+Jul 11 10:45:59 symfony [info] {main} Call "page->executeSlider()"
+Jul 11 10:45:59 symfony [info] {sfDoctrineLogger} executeQuery : SELECT distinct(t.word) AS t__0, t.slug AS t__1 FROM term t ORDER BY t.word ASC
+Jul 11 10:45:59 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/page/templates/_slider.php"
+Jul 11 10:45:59 symfony [info] {main} Get slot "rightBar"
+Jul 11 10:45:59 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_footer.php"
+Jul 11 10:45:59 symfony [info] {main} Get slot "footer"
+Jul 11 10:45:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 11 10:45:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Configuration 9.38 ms (10)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Action "page/index" 0.16 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} View "Success" for "page/index" 266.16 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Partial "global/_header" 6.27 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Partial "global/_search" 0.59 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Component "page/slider" 140.95 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Partial "page/_slider" 94.65 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 1.19 ms (1)
+Jul 11 10:45:59 symfony [info] {sfWebResponse} Send content (56143 o)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "up" (/doctrine-up)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "down" (/doctrine-down)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "search" (/search/:term)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "feedback" (/feedback)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "termsOfService" (/terms-of-service)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "privacy" (/privacy)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "aboutUs" (/about-us)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "adminEditTerm" (/term/:id/edit)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "login" (/login)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "termEdit" (/edit/:hash)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "verify" (/verify/:hash)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "declineTerm" (/decline/:id/term)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "approveTerm" (/approve/:id/term)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "approveList" (/approve)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "char" (/char/:char)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "term" (/terms/:term)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jul 11 10:52:01 symfony [info] {sfPatternRouting} Match route "adminEditTerm" (/term/:id/edit) for /term/183/edit with parameters array (  'module' => 'term',  'action' => 'edit',  'id' => '183',)
+Jul 11 10:52:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:52:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 11 10:52:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:52:01 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 11 10:52:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 11 10:52:01 symfony [info] {securityActions} Call "securityActions->executeLogin()"
+Jul 11 10:52:01 symfony [info] {sfDoctrineLogger} executeQuery : SELECT distinct(t.word) AS t__0, t.slug AS t__1 FROM term t ORDER BY t.word ASC
+Jul 11 10:52:02 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/security/templates/loginSuccess.php"
+Jul 11 10:52:02 symfony [info] {main} Set slot "leftBar"
+Jul 11 10:52:02 symfony [info] {sfPHPView} Decorate content with "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:02 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:02 symfony [info] {main} Get slot "title"
+Jul 11 10:52:02 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_header.php"
+Jul 11 10:52:02 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_search.php"
+Jul 11 10:52:02 symfony [info] {main} Get slot "leftBar"
+Jul 11 10:52:02 symfony [info] {main} Get slot "rightBar"
+Jul 11 10:52:02 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_footer.php"
+Jul 11 10:52:02 symfony [info] {main} Get slot "footer"
+Jul 11 10:52:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 11 10:52:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Configuration 53.47 ms (13)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Action "security/login" 144.05 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} View "Success" for "security/login" 130.01 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Partial "global/_header" 5.80 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Partial "global/_search" 0.58 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 1.20 ms (1)
+Jul 11 10:52:02 symfony [info] {sfWebResponse} Send content (55132 o)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "up" (/doctrine-up)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "down" (/doctrine-down)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "search" (/search/:term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "feedback" (/feedback)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "termsOfService" (/terms-of-service)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "privacy" (/privacy)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "aboutUs" (/about-us)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "adminEditTerm" (/term/:id/edit)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "login" (/login)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "termEdit" (/edit/:hash)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "verify" (/verify/:hash)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "declineTerm" (/decline/:id/term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "approveTerm" (/approve/:id/term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "approveList" (/approve)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "char" (/char/:char)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "term" (/terms/:term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /security/signin with parameters array (  'module' => 'security',  'action' => 'signin',)
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 11 10:52:06 symfony [info] {securityActions} Call "securityActions->executeSignin()"
+Jul 11 10:52:06 symfony [info] {myUser} User is authenticated
+Jul 11 10:52:06 symfony [info] {sfFrontWebController} Redirect to "http://wiki:8085/frontend_dev.php/approve"
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send header "Location: http://wiki:8085/frontend_dev.php/approve"
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Configuration 11.14 ms (8)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Action "security/signin" 1.10 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send content (112 o)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "up" (/doctrine-up)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "down" (/doctrine-down)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "search" (/search/:term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "feedback" (/feedback)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "termsOfService" (/terms-of-service)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "privacy" (/privacy)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "aboutUs" (/about-us)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "adminEditTerm" (/term/:id/edit)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "login" (/login)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "termEdit" (/edit/:hash)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "verify" (/verify/:hash)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "declineTerm" (/decline/:id/term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "approveTerm" (/approve/:id/term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "approveList" (/approve)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "char" (/char/:char)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "term" (/terms/:term)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jul 11 10:52:06 symfony [info] {sfPatternRouting} Match route "approveList" (/approve) for /approve with parameters array (  'module' => 'term',  'action' => 'approveList',)
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 11 10:52:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 11 10:52:06 symfony [info] {termActions} Call "termActions->executeApproveList()"
+Jul 11 10:52:06 symfony [info] {sfDoctrineLogger} executeQuery : SELECT t.id AS t__id, t.word AS t__word, t.authorname AS t__authorname, t.authoremail AS t__authoremail, t.definition AS t__definition, t.example AS t__example, t.likes AS t__likes, t.verified AS t__verified, t.approved AS t__approved, t.created_at AS t__created_at, t.updated_at AS t__updated_at, t.slug AS t__slug, t.definition_slug AS t__definition_slug FROM term t WHERE t.approved = ? - (0 )
+Jul 11 10:52:06 symfony [info] {sfDoctrineLogger} executeQuery : SELECT distinct(t.word) AS t__0, t.slug AS t__1 FROM term t ORDER BY t.word ASC
+Jul 11 10:52:06 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/term/templates/approveListSuccess.php"
+Jul 11 10:52:06 symfony [info] {main} Set slot "leftBar"
+Jul 11 10:52:06 symfony [info] {sfPHPView} Decorate content with "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:06 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:06 symfony [info] {main} Get slot "title"
+Jul 11 10:52:06 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_header.php"
+Jul 11 10:52:06 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_search.php"
+Jul 11 10:52:06 symfony [info] {main} Get slot "leftBar"
+Jul 11 10:52:06 symfony [info] {main} Get slot "rightBar"
+Jul 11 10:52:06 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_footer.php"
+Jul 11 10:52:06 symfony [info] {main} Get slot "footer"
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Configuration 11.92 ms (9)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Action "term/approveList" 153.09 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} View "Success" for "term/approveList" 119.48 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Partial "global/_header" 6.40 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Partial "global/_search" 0.54 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 1.15 ms (1)
+Jul 11 10:52:06 symfony [info] {sfWebResponse} Send content (55606 o)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "up" (/doctrine-up)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "down" (/doctrine-down)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "search" (/search/:term)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "feedback" (/feedback)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "termsOfService" (/terms-of-service)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "privacy" (/privacy)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "aboutUs" (/about-us)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "adminEditTerm" (/term/:id/edit)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "login" (/login)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "termEdit" (/edit/:hash)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "verify" (/verify/:hash)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "declineTerm" (/decline/:id/term)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "approveTerm" (/approve/:id/term)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "approveList" (/approve)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "char" (/char/:char)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "term" (/terms/:term)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jul 11 10:52:12 symfony [info] {sfPatternRouting} Match route "adminEditTerm" (/term/:id/edit) for /term/183/edit with parameters array (  'module' => 'term',  'action' => 'edit',  'id' => '183',)
+Jul 11 10:52:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 11 10:52:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 11 10:52:12 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 11 10:52:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 11 10:52:12 symfony [info] {termActions} Call "termActions->executeEdit()"
+Jul 11 10:52:12 symfony [info] {sfDoctrineLogger} executeQuery : SELECT t.id AS t__id, t.word AS t__word, t.authorname AS t__authorname, t.authoremail AS t__authoremail, t.definition AS t__definition, t.example AS t__example, t.likes AS t__likes, t.verified AS t__verified, t.approved AS t__approved, t.created_at AS t__created_at, t.updated_at AS t__updated_at, t.slug AS t__slug, t.definition_slug AS t__definition_slug FROM term t WHERE t.id = ? LIMIT 1 - (183 )
+Jul 11 10:52:12 symfony [info] {sfDoctrineLogger} executeQuery : SELECT distinct(t.word) AS t__0, t.slug AS t__1 FROM term t ORDER BY t.word ASC
+Jul 11 10:52:12 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/term/templates/editSuccess.php"
+Jul 11 10:52:12 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\modules/term/templates/_form.php"
+Jul 11 10:52:12 symfony [info] {main} Set slot "leftBar"
+Jul 11 10:52:12 symfony [info] {sfPHPView} Decorate content with "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:12 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/layout.php"
+Jul 11 10:52:12 symfony [info] {main} Get slot "title"
+Jul 11 10:52:12 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_header.php"
+Jul 11 10:52:12 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_search.php"
+Jul 11 10:52:12 symfony [info] {main} Get slot "leftBar"
+Jul 11 10:52:12 symfony [info] {main} Get slot "rightBar"
+Jul 11 10:52:12 symfony [info] {sfPartialView} Render "C:\xampp\htdocs\dictionary\apps\frontend\templates/_footer.php"
+Jul 11 10:52:12 symfony [info] {main} Get slot "footer"
+Jul 11 10:52:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 11 10:52:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Configuration 12.25 ms (9)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Action "term/edit" 177.93 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} View "Success" for "term/edit" 153.01 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Partial "term/_form" 126.34 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Partial "global/_header" 6.19 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Partial "global/_search" 0.59 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 1.18 ms (1)
+Jul 11 10:52:12 symfony [info] {sfWebResponse} Send content (69362 o)
