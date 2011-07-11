@@ -31,7 +31,6 @@ class Term extends BaseTerm
   {
     $relatedTermSlug = explode('-', $this->getDefinitionSlug());
     $query = Doctrine::getTable('Term')->createQuery('t');
-
     if($relatedTermSlug)
     {
       foreach($relatedTermSlug as $slug)
@@ -42,7 +41,7 @@ class Term extends BaseTerm
         }
       }
     }
-
+    
     return $query->execute();
   }
 

@@ -13,6 +13,7 @@ div.messages { margin: 0 35px 0 45px; padding: 10px 20px; }
 .success { background: #070; color: #fff; }
 a1 { color: #115588; text-decoration: underline; }
 ul { list-style: none; }
+.underlined { text-decoration: underline; }
 
 html {  font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 14px; height: 100%; }
 body { background: #eee; height: 90%; }
@@ -75,3 +76,9 @@ form#loginForm .item{ padding: 5px; }
 #feedbackForm textarea { width: 400px; }
 #feedbackForm input.text { width: 400px; margin: 5px 0; }
 #feedbackForm div.label { text-align: left; padding: 0 0 0 15px; }
+
+
+/* Term edit page */
+#term_likes {  }
+
+

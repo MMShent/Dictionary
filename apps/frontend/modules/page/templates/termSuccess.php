@@ -17,16 +17,17 @@
       <?php
       // Related terms
       $relatedTerms = $term->getRelatedTerms();
-      if(count($relatedTerms) > 0)  { ?>
+      //if(count($relatedTerms) > 0)  { ?>
         <ul>
           <?php $related = array(); ?>
-          <?php foreach($relatedTerms as $relatedTerm) { if($relatedTerm->getWord() != $term->getWord() && !in_array($relatedTerm->getWord(), $related)) { ?>
+          <?php foreach($relatedTerms as $relatedTerm) {
+            if($relatedTerm->getWord() != $term->getWord() && !in_array($relatedTerm->getWord(), $related)) { ?>
             <li><?php echo link_to($relatedTerm->getWord(), '@term?term='.$relatedTerm->getSlug())?></li>
             <?php $related[] = $relatedTerm->getWord() ?>
           <?php } }?>
          </ul>
         <div class="clear"></div>
-     <?php }?>
+     <?php // }?>
     </div>
 
     <div class="likes">
@@ -39,7 +40,7 @@
     <div class="clear"></div>
     
     <div>
-        <?php echo 'by '.$term->getAuthorName().' '.$term->getAuthorEmail(). ' '. format_date($term->getCreatedAt(), 'D')?>
+        <?php echo 'by '.$term->getAuthorName().' info@skdtac.com '. format_date($term->getCreatedAt(), 'D')?>
     </div>
 </div>
 

@@ -20,7 +20,8 @@
       }
     }else
     {
-      echo '<strong>'.$sf_params->get('term').'</strong> <span>isn\'t defined </span>'. link_to('yet', 'page/new');
+      echo '<strong>'.$sf_params->get('term').'</strong> <span>isn\'t defined </span>'. 
+              link_to('yet', 'page/new', array('class' => 'underlined'));
     }
   ?>
   <div class="clear"></div>

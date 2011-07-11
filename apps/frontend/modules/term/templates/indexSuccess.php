@@ -5,6 +5,7 @@
       <th>Word</th>
       <th>Author name</th>
       <th>Likes</th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <td><?php echo $term->getWord() ?></td>
       <td><?php echo $term->getAuthorName() ?></td>
       <td><?php echo $term->getLikes() ?></td>
+      <td><?php echo $term->getAuthorEmail() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

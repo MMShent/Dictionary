@@ -55,6 +55,34 @@
           <?php echo $form['authorEmail'] ?>
         </td>
       </tr>
+      <tr>
+        <th><?php echo $form['slug']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['slug']->renderError() ?>
+          <?php echo $form['slug'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['definition_slug']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['definition_slug']->renderError() ?>
+          <?php echo $form['definition_slug'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['created_at']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['created_at']->renderError() ?>
+          <?php echo $form['created_at'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['updated_at']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['updated_at']->renderError() ?>
+          <?php echo $form['updated_at'] ?>
+        </td>
+      </tr>
     </tbody>
   </table>
 </form>
