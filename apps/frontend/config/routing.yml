@@ -23,9 +23,9 @@ privacy:
   url:   /privacy
   param: { module: page, action: staticPage, page: privacy  }
 
-aboutUs:
-  url:   /about-us
-  param: { module: page, action: staticPage, page: aboutUs  }
+ads:
+  url:   /ads
+  param: { module: page, action: ads  }
 ##########################################
 
 adminEditTerm:

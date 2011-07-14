@@ -212,4 +212,29 @@ class pageActions extends sfActions
   {
     Doctrine::getTable('Term')->up();
   }
-}
+
+  public function executeAds(sfWebRequest $request)
+  {
+    $data = $request->getParameter('ads');
+
+    if($data)
+    {
+      $noErrors = true;
+      if(empty($data['name']))
+      {
+        $this->errorMessage = 'Your name is required. Please fill the text field bellow!';
+        $noErrors = false;
+      } else if(empty($data['email']))
+      {
+        $this->errorMessage = 'Your email is required. Please fill the text field bellow!';
+        $noErrors = false;
+      }
+
+      if($noErrors)
+      {
+        Tools::sendAdsEmail($data);
+        $this->emailSent = true;
+      } // if
+    } // if
+  } // Eof
+} // Eoc

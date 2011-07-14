@@ -117,5 +117,30 @@ Email: $email
     self::configMail(self::$dan_email, $subject, $plainContent, $body, $recipients);
   }
 
+  public static function sendAdsEmail($ads)
+  {
+    $recipientsArray = array(self::$my_email, self::$dan_email);
+    $recipients = implode(',', $recipientsArray);
+  	$subject = '[Wiki] - Ads request';
+
+    $body = '<strong>Ads request just arrived:</strong><br />'."\r\n";
+    $body .= '<br /><br />'."\r\n";
+    $body .= $ads['info'].'<br /><br />'."\r\n";
+    $body .= '<strong>Subject:</strong> '.$ads['dates'].' - '.$ads['budget'].' <br /><br />'."\r\n";
+    $body .= '<strong>From:</strong> '.$ads['name'].' - '.$ads['email'].' <br /><br />'."\r\n";
+
+    $text = $ads['info'];
+    $subjectFake = $ads['dates'].' - '.$ads['budget'];
+    $from = $ads['name'].' - '.$ads['email'];
+    $plainContent = "New ads request just arrived:\r\n\r\n
+$text
+\r\n\r\n
+Subject: $subjectFake \r\n
+From: $from
+\r\n";
+
+    self::configMail(self::$dan_email, $subject, $plainContent, $body, $recipients);
+  }
+
 }
 ?>

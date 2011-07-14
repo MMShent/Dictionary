@@ -81,4 +81,17 @@ form#loginForm .item{ padding: 5px; }
 /* Term edit page */
 #term_likes {  }
 
+/* Feedback page */
+#mailSent { margin: 20px; background: #f3f3f3; padding: 10px; }
+form#feedbackForm { margin: 20px 0;  }
 
+
+/* Ads page */
+div#adsPage { margin: 20px; }
+div#adsPage .errorMessage { margin: 20px; background: #f3f3f3; padding: 10px; color: #c00; }
+table#adsTable { margin: 20px 0; font-size: 12px; }
+table#adsTable th { text-align: left; width: 140px; }
+table#adsTable th span { color: #c00; }
+table#adsTable td { padding: 5px 0; }
+table#adsTable td input.text { width: 250px; }
+table#adsTable td textarea { width: 250px; height: 150px; }

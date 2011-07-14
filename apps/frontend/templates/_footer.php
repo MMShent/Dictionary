@@ -12,7 +12,7 @@
       <a href="<?php echo url_for('@termsOfService')?>">Terms of Service</a>
       <a href="<?php echo url_for('@privacy')?>">Privacy</a>
       <a href="<?php echo url_for('@feedback')?>">Feedback</a>
-      <a href="<?php echo url_for('@aboutUs')?>">About Us</a>
+      <a href="<?php echo url_for('@ads')?>">Advertise</a>
     </div>
 
 </div>
